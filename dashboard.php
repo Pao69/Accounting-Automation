@@ -31,6 +31,16 @@ $accountBalances = $conn->query($sql);
 
 <!-- Statistics Cards -->
 <div class="row">
+    <div class="col-12 mb-4">
+        <div class="card">
+            <div class="card-body text-center py-4">
+                <h2 class="mb-0">
+                    <i class="bi bi-speedometer2 me-2"></i>Dashboard Overview
+                </h2>
+                <p class="text-muted mt-2">Welcome to your accounting system dashboard</p>
+            </div>
+        </div>
+    </div>
     <div class="col-md-4">
         <div class="stat-card" style="background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);">
             <i class="bi bi-list-ul"></i>

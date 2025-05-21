@@ -84,16 +84,14 @@ $(document).ready(function() {
 
     // Add new row
     $('#addRow').click(function() {
+        // Get the account options from the first row's select element
+        const accountOptions = $('select[name="items[0][account_id]"]').html();
+        
         const newRow = `
             <tr>
                 <td>
                     <select name="items[${rowCount}][account_id]" class="form-select" required>
-                        <option value="">Select Account</option>
-                        <?php foreach ($accounts as $account): ?>
-                            <option value="<?php echo $account['id']; ?>">
-                                <?php echo $account['account_code'] . ' - ' . $account['name']; ?>
-                            </option>
-                        <?php endforeach; ?>
+                        ${accountOptions}
                     </select>
                 </td>
                 <td>

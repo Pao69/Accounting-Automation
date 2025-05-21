@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# Set the base for the application
+RewriteBase /Codes/Accounting-Automation/
+
+# If the requested file or directory exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise, redirect all requests to index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Enable PHP error logging
+php_flag log_errors on
+php_value error_log logs/error.log 

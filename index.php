@@ -18,6 +18,10 @@ $router->addRoute('/financial-statements/income', 'FinancialStatementsController
 $router->addRoute('/financial-statements/equity', 'FinancialStatementsController@equityStatement');
 $router->addRoute('/financial-statements/balance', 'FinancialStatementsController@balanceSheet');
 $router->addRoute('/closing', 'ClosingController@index');
+$router->addRoute('/closing/process', 'ClosingController@process');
+$router->addRoute('/accounts', 'AccountsController@index');
+$router->addRoute('/accounts/create', 'AccountsController@create');
+$router->addRoute('/accounts/edit/{id}', 'AccountsController@edit');
 
 // Handle the request
 $router->dispatch(); 
